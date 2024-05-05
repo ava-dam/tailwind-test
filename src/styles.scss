@@ -1,1 +1,58 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tailwind-test-primary: mat.define-palette(mat.$indigo-palette);
+$tailwind-test-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$tailwind-test-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$tailwind-test-theme: mat.define-light-theme((
+  color: (
+    primary: $tailwind-test-primary,
+    accent: $tailwind-test-accent,
+    warn: $tailwind-test-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($tailwind-test-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@layer components {
+    .btn_primary {
+        @apply bg-orange font-sans font-medium rounded-full justify-center w-40 items-center h-10 text-white text-sm;
+    }
+
+    .btn_secondary {
+        @apply font-sans font-medium border hover:border-2 rounded-full justify-center w-40 items-center h-10 text-orange text-sm;
+    }
+
+    .input_field {
+        @apply placeholder:text-grey-text hover:border-2 hover:border-black focus:outline-none focus:ring focus:border-grey-field focus:bg-blue-field px-3 py-3.5 border border-grey-field bg-white h-12 max-h-12 w-80 rounded-sm font-sans text-sm text-black caret-blue-caret;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Rubik, "Rubik Medium", sans-serif; }
