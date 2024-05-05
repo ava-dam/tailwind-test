@@ -43,11 +43,11 @@ $tailwind-test-theme: mat.define-light-theme((
 
 @layer components {
     .btn_primary {
-        @apply bg-orange font-sans font-medium rounded-full justify-center w-40 items-center h-10 text-white text-sm;
+        @apply bg-orange font-sans font-medium rounded-full justify-center items-center h-10 text-white text-sm;
     }
 
     .btn_secondary {
-        @apply font-sans font-medium border hover:border-2 rounded-full justify-center w-40 items-center h-10 text-orange text-sm;
+        @apply font-sans font-medium border hover:border-2 rounded-full justify-center items-center h-10 text-orange text-sm;
     }
 
     .input_field {

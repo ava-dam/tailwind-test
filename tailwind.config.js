@@ -24,6 +24,10 @@ module.exports = {
       'yellow': '#FFF5DA'
     },
 
+    boxShadow: {
+      'sm': '0px 0px 5px 0px rgba(0, 0, 0, 0.2)'
+    },
+
     fontFamily: {
       sans: ['Rubik', 'sans-serif']
     },
@@ -38,6 +42,7 @@ module.exports = {
         'sm': '4px',
         'md': '8px',
         'full': '82px',
+        'max': '9999px'
       },
       borderWidth: {
         DEFAULT: '1px',

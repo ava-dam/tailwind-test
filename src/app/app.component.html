@@ -12,7 +12,20 @@
             </mat-error>
         }
     </form>
-    <button class="mr-2 my-2 btn_secondary">SAVE TO CART</button>
-    <button class="btn_primary" (click)="onContinue()">APPLY NOW</button>
+    <div class="ml-2 my-4 flex-row shadow-sm w-80 px-2">
+        <button class="w-36 mr-2 my-2 btn_secondary">SAVE TO CART</button>
+        <button class="w-36 btn_primary" (click)="onContinue()">APPLY NOW</button>
+    </div>
+    <div class="ml-2 w-80 h-12 flex bg-blue-header text-white font-medium text-center py-3">
+        <div class="flex pl-4">
+            <img src="https://ip-dynbanners.bajajfinserv.in/3in1Mobile/assets/images/left_arrow.svg">
+        </div>
+        <p class="flex px-16">Personal Details</p>
+    </div>
+    <!-- <div class="ml-2 w-80 h-12 flex place-content-evenly bg-white justify-center align-center text-center pt-pt">
+        <div class="flex h-4 w-4 rounded-full border-blue">Hi</div>
+        <span class="flex">Hello</span>
+        <span class="flex">Bye</span>
+    </div> -->
     <router-outlet />
 </div>
